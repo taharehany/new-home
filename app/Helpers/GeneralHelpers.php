@@ -86,6 +86,13 @@ if (!function_exists('cities')) {
    }
 }
 
+if (!function_exists('types')) {
+   function types()
+   {
+      return App\Models\Type::all();
+   }
+}
+
 if (!function_exists('is_active_menu')) {
 
    function is_active_menu($url)

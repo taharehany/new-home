@@ -40,7 +40,14 @@
                      <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">المدن</a>
                         <ul class="dropdown-menu">
                            @foreach(cities() as $city)
-                           <li><a class="dropdown-item" href="{{ route('projects') }}">{{ $city->title }}</a></li>
+                           <li><a class="dropdown-item" href="{{ route('city.show', $city->id) }}">{{ $city->title }}</a></li>
+                           @endforeach
+                        </ul>
+                     </li>
+                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">أنواع العقارات</a>
+                        <ul class="dropdown-menu">
+                           @foreach(types() as $type)
+                           <li><a class="dropdown-item" href="{{ route('type.index', $type->id) }}">{{ $type->title }}</a></li>
                            @endforeach
                         </ul>
                      </li>
