@@ -15,8 +15,9 @@
                         <h3>صفحات هامة</h3>
                         <div class="main">
                            <ul>
-                              <li><a href="{{ route('cities') }}">جميع المدن</a></li>
-                              <li><a href="{{ route('projects') }}">جميع العقارات</a></li>
+                              @foreach(types() as $type)
+                              <li><a href="{{ route('type.index', $type->id) }}">{{ $type->title }}</a></li>
+                              @endforeach
                            </ul>
                         </div>
                      </div>
