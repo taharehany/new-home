@@ -1,0 +1,52 @@
+#add_field {
+  background-color: #4e51bf;
+  font-size: 30px;
+  color: #fff;
+  border: none;
+  line-height: normal;
+  border-radius: 10px;
+  padding: 5px 10px;
+}
+
+.repeated {
+  display: flex;
+  align-items: flex-end;
+}
+
+.main-content .global-area .form form .form-group label {
+  text-transform: capitalize;
+}
+
+.main-content .global-area table.custom .table-data-feature {
+  grid-template-columns: repeat(3, calc(33.3333333333% - 5px));
+}
+
+.show-page .box-image {
+  height: 100%;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.remove-div {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  height: 100%;
+}
+.remove-div .remove_field {
+  background-color: red;
+  font-size: 30px;
+  color: #fff;
+  border: none;
+  line-height: normal;
+  border-radius: 10px;
+  padding: 0 10px;
+}
+
+.preview {
+  height: 100px;
+  width: 100px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}/*# sourceMappingURL=over-style.css.map */
