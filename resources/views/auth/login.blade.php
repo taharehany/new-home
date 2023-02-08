@@ -25,13 +25,18 @@
       .signin-area, .signup-area {
          display: block
       }
+      .form {
+          padding: 15px;
+          border: 1px solid #ddd;
+          border-radius: 10px;
+      }
     </style>
   </head>
   <body>
     <div class="main-wrapper">
       <div class="signin-area">
         <div class="signin part">
-          <div class="form">
+          <div class="form mt-5">
             <div class="container">
               <div class="title">
                 <h2>login to dashboard</h2>
