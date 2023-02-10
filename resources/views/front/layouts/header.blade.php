@@ -35,19 +35,28 @@
                </button>
                <div class="collapse navbar-collapse" id="navbarNav">
                   <ul class="navbar-nav">
-                     <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ route('main') }}">الرئيسية</a></li>
-                     <li class="nav-item"><a class="nav-link" href="{{ route('projects') }}">جميع المشاريع</a></li>
-                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">المدن</a>
+                     <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="{{ route('main') }}">الرئيسية</a>
+                     </li>
+                     <li class="nav-item">
+                        <a class="nav-link" href="{{ route('projects') }}">جميع المشاريع</a>
+                     </li>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">المناطق</a>
                         <ul class="dropdown-menu">
                            @foreach(cities() as $city)
-                           <li><a class="dropdown-item" href="{{ route('city.show', $city->id) }}">{{ $city->title }}</a></li>
+                           <li><a class="dropdown-item" href="{{ route('city.show', $city->id) }}">{{ $city->title }}</a>
+                           </li>
                            @endforeach
                         </ul>
                      </li>
-                     <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">أنواع العقارات</a>
+                     <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">أنواع العقارات</a>
                         <ul class="dropdown-menu">
                            @foreach(types() as $type)
-                           <li><a class="dropdown-item" href="{{ route('type.index', $type->id) }}">{{ $type->title }}</a></li>
+                           <li>
+                              <a class="dropdown-item" href="{{ route('type.index', $type->id) }}">{{ $type->title }}</a>
+                           </li>
                            @endforeach
                         </ul>
                      </li>
@@ -65,13 +74,28 @@
                <div class="navbar">
                   <div class="collapsed navbar-collapse" id="navbarNavSide">
                      <ul class="navbar-nav">
-                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ route('main') }}">الرئيسية</a></li>
-                        <li class="nav-item"><a class="nav-link" href="properties.html">العقارات</a></li>
-                        <li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">الصفحات</a>
+                        <li class="nav-item">
+                           <a class="nav-link active" aria-current="page" href="{{ route('main') }}">الرئيسية</a>
+                        </li>
+                        <li class="nav-item">
+                           <a class="nav-link" href="{{ route('projects') }}">جميع المشاريع</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">المناطق</a>
                            <ul class="dropdown-menu">
-                              <li><a class="dropdown-item" href="properties.html">العقارات</a></li>
-                              <li><a class="dropdown-item" href="single-property.html">العقار الواحد</a></li>
-                              <li><a class="dropdown-item" href="make-property.html"> تواصل معنا</a></li>
+                              @foreach(cities() as $city)
+                              <li><a class="dropdown-item" href="{{ route('city.show', $city->id) }}">{{ $city->title }}</a></li>
+                              @endforeach
+                           </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">أنواع العقارات</a>
+                           <ul class="dropdown-menu">
+                              @foreach(types() as $type)
+                              <li>
+                                 <a class="dropdown-item" href="{{ route('type.index', $type->id) }}">{{ $type->title }}</a>
+                              </li>
+                              @endforeach
                            </ul>
                         </li>
                      </ul>
