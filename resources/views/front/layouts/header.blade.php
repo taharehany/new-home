@@ -23,13 +23,18 @@
    <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Tajawal&amp;display=swap" rel="stylesheet">
    <link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
+   <style>
+      .hero-header {
+         padding: 20vh 0 15vh;
+      }
+   </style>
 </head>
 
 <body>
    <div class="main-wrapper">
       <header>
          <nav class="navbar main-nav navbar-expand-lg navbar-light bg-light">
-            <div class="container"><a class="navbar-brand m-0" href="{{ route('main') }}"> <img src="{{ asset(settings()->logo) }}" alt=""></a>
+            <div class="container"><a class="navbar-brand m-0 py-2" href="{{ route('main') }}"> <img src="{{ asset(settings()->logo) }}" alt="" style="max-width: 250px;"></a>
                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#side_menu" aria-controls="side_menu" aria-expanded="false" aria-label="Toggle navigation">
                   <div class="hamburger-menu"><span></span><span></span><span></span></div>
                </button>
