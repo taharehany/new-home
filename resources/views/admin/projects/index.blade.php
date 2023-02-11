@@ -14,6 +14,7 @@
                      <th>#</th>
                      <th>title</th>
                      <th>type</th>
+                     <th>city</th>
                      <th>image</th>
                      <th>created at</th>
                      <th>controle</th>
@@ -24,7 +25,20 @@
                   <tr>
                      <td class="dtr-control">{{ $key + 1 }}</td>
                      <td>{{ $value->title }}</td>
-                     <td>{{ $value->type }}</td>
+                     <td>
+                        @foreach($cities as $key => $city)
+                        @if($value->city_id === $city->id)
+                        {{ $city->title }}
+                        @endif
+                        @endforeach
+                     </td>
+                     <td>
+                        @foreach($types as $key => $type)
+                        @if($value->type_id === $type->id)
+                        {{ $type->title }}
+                        @endif
+                        @endforeach
+                     </td>
                      <td><img src="{{ asset($value->image) }}" style="width: 100px" alt=""></td>
                      <td>{{ $value->created_at }}</td>
                      <td>
@@ -37,7 +51,7 @@
                               @csrf
                               @method('delete')
                               <button type="submit" class="item delete">
-                              <i class="far fa-trash-alt"></i>
+                                 <i class="far fa-trash-alt"></i>
                               </button>
                            </form>
                         </div>

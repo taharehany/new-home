@@ -26,7 +26,7 @@
             <a href="{{ route('project.show', $project->id) }}">
                <h2 class="title">{{ $project->title }}</h2>
                <p class="location"><i class="bi-pin"></i>{{ $project->location }}</p></a>
-               <a class="btn" href="{{ settings()->mobile }}">
+               <a class="btn" href="tel:{{ settings()->mobile }}">
                <i class="bi bi-telephone"></i>اتصل بنا</a>
                <a class="btn fav" href="https://wa.me/{{ settings()->whatsapp }}"><i class="bi bi-whatsapp"></i>واتساب</a>
                </div>

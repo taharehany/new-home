@@ -19,7 +19,9 @@ class ProjectsController extends Controller
    public function index()
    {
       $data = Project::all();
-      return view('admin.projects.index', compact('data'));
+      $types = Type::all();
+      $cities = City::all();
+      return view('admin.projects.index', compact('data', 'types', 'cities'));
    }
 
    /**

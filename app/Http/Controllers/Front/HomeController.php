@@ -6,7 +6,6 @@ use App\Http\Controllers\Controller;
 use App\Models\City;
 use App\Models\Type;
 use App\Models\Project;
-use App\Models\Setting;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -16,6 +15,8 @@ class HomeController extends Controller
       $cities = City::all();
       $types = Type::all();
       $projects = Project::all();
+
+      // dd(count($types) * 6);
 
       return view('front.index', compact('projects', 'cities', 'types'));
    }

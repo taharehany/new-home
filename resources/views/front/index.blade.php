@@ -19,7 +19,7 @@
                         <select class="select" name="city">
                            <option value="">كل المدن</option>
                            @foreach(cities() as $city)
-                              <option value="{{ $city->id }}">{{ $city->title }}</option>
+                           <option value="{{ $city->id }}">{{ $city->title }}</option>
                            @endforeach
                         </select>
                      </div>
@@ -30,7 +30,7 @@
                         <select class="select" name="type">
                            <option value="">كل أنواع العقار</option>
                            @foreach(types() as $type)
-                              <option value="{{ $type->id }}">{{ $type->title }}</option>
+                           <option value="{{ $type->id }}">{{ $type->title }}</option>
                            @endforeach
                         </select>
                      </div>
@@ -76,6 +76,9 @@
 <section class="properties">
    <div class="container">
       @foreach ($types as $type)
+      @php
+      $array = [];
+      @endphp
       <div class="property-content">
          <div class="title">
             <h2>{{ $type->title }}</h2><a href="{{ route('type.index', $type->id) }}">عرض الكل</a>
@@ -83,7 +86,12 @@
          <div class="row">
             @foreach ($projects as $project)
             @if ($project->type_id === $type->id)
-            <div class="col-md-6 col-lg-4">
+
+            @php
+            $array = Arr::prepend($array, $project->id, $project->id);
+            @endphp
+
+            @if (count($array) <= 6) <div class="col-md-6 col-lg-4">
                <div class="property-box">
                   <div class="property-image">
                      <a href="{{ route('project.show', $project->id) }}">
@@ -95,16 +103,18 @@
                         <h2 class="title">{{ $project->title }}</h2>
                         <p class="location"><i class="bi-pin"></i>{{ $project->location }}</p>
                      </a>
-                     <a class="btn" href="{{ route('project.show', $project->id) }}"><i class="bi bi-telephone"></i>اتصل بنا</a>
-                     <a class="btn fav" href="#!"><i class="bi bi-whatsapp"></i>واتساب</a>
+                     <a class="btn" href="tel:{{ settings()->mobile }}"><i class="bi bi-telephone"></i>اتصل بنا</a>
+                     <a class="btn fav" href="https://wa.me/{{ settings()->whatsapp }}"><i class="bi bi-whatsapp"></i>واتساب</a>
                   </div>
                </div>
-            </div>
-            @endif
-            @endforeach
          </div>
+         @endif
+
+         @endif
+         @endforeach
       </div>
-      @endforeach
+   </div>
+   @endforeach
    </div>
 </section>
 <!--properties-->

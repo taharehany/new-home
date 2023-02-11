@@ -18,6 +18,7 @@
    <div class="container">
       <div class="property-content">
          <div class="row">
+            @if (count($projects) > 0)
             @foreach ($projects as $project)
             <div class="col-md-12 col-lg-4">
                <div class="property-box">
@@ -27,13 +28,17 @@
                         <h2 class="title">{{ $project->title }}</h2>
                         <p class="location"><i class="bi-pin"></i>{{ $project->location }}</p>
                      </a>
-                     <a class="btn" href="{{ settings()->mobile }}">
+                     <a class="btn" href="tel:{{ settings()->mobile }}">
                         <i class="bi bi-telephone"></i>اتصل بنا</a>
                      <a class="btn fav" href="https://wa.me/{{ settings()->whatsapp }}"><i class="bi bi-whatsapp"></i>واتساب</a>
                   </div>
                </div>
             </div>
             @endforeach
+
+            @else
+            <h2 class="text-center">لا يوجد مشروعات</h2>
+            @endif
          </div>
       </div>
    </div>
