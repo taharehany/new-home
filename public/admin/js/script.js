@@ -58,7 +58,9 @@ $(document).ready(function () {
    //     }
    //   });
 
-   $("#example").DataTable();
+   $("#example").DataTable({
+      paging: false,
+   });
 
    // $(window).on("scroll", function () {
    //   if ($(this).scrollTop() > 1) {

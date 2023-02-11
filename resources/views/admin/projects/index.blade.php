@@ -13,8 +13,8 @@
                   <tr>
                      <th>#</th>
                      <th>title</th>
-                     <th>type</th>
                      <th>city</th>
+                     <th>type</th>
                      <th>image</th>
                      <th>created at</th>
                      <th>controle</th>
