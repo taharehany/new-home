@@ -16,4 +16,9 @@
    <link rel="stylesheet" href="{{ asset('admin') }}/css/style.css" />
    <link rel="stylesheet" href="{{ asset('admin') }}/css/over-style.css" />
    <script src="//cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+   <style>
+      ul {
+         padding: revert;
+      }
+   </style>
 </head>

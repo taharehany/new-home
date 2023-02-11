@@ -27,6 +27,9 @@
       .hero-header {
          padding: 20vh 0 15vh;
       }
+      ul {
+         padding: revert;
+      }
    </style>
 </head>
 
