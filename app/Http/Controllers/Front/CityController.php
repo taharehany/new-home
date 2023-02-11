@@ -16,8 +16,8 @@ class CityController extends Controller
      }
     public function show($id)
      {
-         $city = city::findorfail($id);
-         $projects = project::where('city_id', $id)->get();
+         $city = City::findorfail($id);
+         $projects = Project::where('city_id', $id)->get();
          return view('front.city.show', compact('city', 'projects'));
      }
 }
