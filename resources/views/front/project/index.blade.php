@@ -37,7 +37,7 @@
             @endforeach
 
             @else
-            <h2 class="text-center">لا يوجد مشروعات</h2>
+            <h2 class="text-center">لا يوجد عقارات</h2>
             @endif
          </div>
       </div>
