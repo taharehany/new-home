@@ -43,7 +43,7 @@ class CityController extends Controller
        } else {
           unset($data['image']);
        }
-
+      $data ['slug']=Slug($data['title']);
        $general = City::create($data);
 
        return $general ? redirect(route('cities.index'))->with(['success' => 'تم الإضافة بنجاح']) : redirect()->back();
@@ -88,6 +88,7 @@ class CityController extends Controller
         } else {
            $data['image'] = $general->image;
         }
+        $data ['slug']=Slug($data['title']);
 
         $general->update($data);
 

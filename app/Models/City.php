@@ -16,6 +16,7 @@ class City extends Model
 
     protected $fillable = [
       'title',
+      'slug',
       'image',
     ];
 

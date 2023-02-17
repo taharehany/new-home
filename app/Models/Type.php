@@ -15,10 +15,14 @@ class Type extends Model
      ];
 
      protected $fillable = [
-       'title',
+       'title','slug'
      ];
 
      public function Projects(){
-       return $this->hasMany(Project::class, 'project_id');
+       return $this->hasMany(Project::class, 'type_id')->orderby('id','DESC');
      }
+
+     public function Project(){
+      return $this->hasMany(Project::class, 'type_id')->orderby('id','DESC')->take(6);
+    }
 }

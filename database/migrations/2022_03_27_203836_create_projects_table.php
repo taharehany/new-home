@@ -18,6 +18,7 @@ class CreateProjectsTable extends Migration
             $table->integer('city_id');
             $table->integer('type_id');
             $table->string('title');
+            $table->string('slug');
             $table->text('description');
             $table->string('image');
             $table->string('location');

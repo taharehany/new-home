@@ -13,10 +13,15 @@ class ProjectController extends Controller
       $projects = Project::all();
       return view('front.project.index', compact('projects'));
    }
-   public function show($id)
+   public function show($slug,$city_slug)
    {
-      $related_projects = Project::paginate(6);
-      $project = Project::findorfail($id);
+      $project = Project::where('slug',$slug)->first();
+
+      if(!$project){
+         return abort(404);
+      }
+      $related_projects = Project::where('slug',"!=",$slug)->where('city_id',$project->city_id)->paginate(6);
+
       return view('front.project.show', compact('project', 'related_projects'));
    }
    public function search()

@@ -14,10 +14,13 @@ class CityController extends Controller
          $cities = City::all();
          return view('front.city.index', compact('cities'));
      }
-    public function show($id)
+    public function show($slug)
      {
-         $city = City::findorfail($id);
-         $projects = Project::where('city_id', $id)->get();
+         $city = City::where('slug',$slug)->first();
+         if(!$city){
+            return abort(404);
+         }
+         $projects = Project::where('city_id', $city->id)->get();
          return view('front.city.show', compact('city', 'projects'));
      }
 }

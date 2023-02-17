@@ -22,9 +22,9 @@
             @foreach ($projects as $project)
             <div class="col-md-12 col-lg-4">
                <div class="property-box">
-                  <div class="property-image"><a href="{{ route('project.show', $project->id) }}"><img src="{{ asset($project->image) }}" alt=""></a></div>
+                  <div class="property-image"><a href="{{ route('project.show', [@$project->slug,$project->CityData->slug]) }}"><img src="{{ asset($project->image) }}" alt=""></a></div>
                   <div class="property-details">
-                     <a href="{{ route('project.show', $project->id) }}">
+                     <a href="{{ route('project.show', [@$project->slug,$project->CityData->slug]) }}">
                         <h2 class="title">{{ $project->title }}</h2>
                         <p class="location"><i class="bi-pin"></i>{{ $project->location }}</p>
                      </a>

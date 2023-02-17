@@ -19,11 +19,11 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', [HomeController::class, 'index'])->name('main');
 Route::get('/projects', [ProjectController::class, 'index'])->name('projects');
-Route::get('/projects/{id}', [ProjectController::class, 'show'])->name('project.show');
+Route::get('/projects/{city_slug?}/{slug?}', [ProjectController::class, 'show'])->name('project.show');
 Route::any('/projects', [ProjectController::class, 'search'])->name('projects.search');
 Route::get('/cities', [CityController::class, 'index'])->name('cities');
-Route::get('/cities/{id}', [CityController::class, 'show'])->name('city.show');
-Route::get('/types/{id}', [TypeController::class, 'show'])->name('type.index');
+Route::get('/cities/{slug?}', [CityController::class, 'show'])->name('city.show');
+Route::get('/types/{slug?}', [TypeController::class, 'show'])->name('type.index');
 
 Auth::routes();
 

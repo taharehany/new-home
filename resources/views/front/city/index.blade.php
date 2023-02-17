@@ -21,7 +21,7 @@
          @foreach ($cities as $city)
          <div class="col-sm-6 col-md-4 col-lg-4">
             <div class="hot-box">
-               <a href="{{ route('city.show', $city->id) }}">
+               <a href="{{ route('city.show', $city->slug) }}">
                   <div class="hot-image"><img src="{{ asset($city->image) }}" alt=""></div>
                   <div class="hot-details">
                      <h2>{{ $city->title }}</h2>

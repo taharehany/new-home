@@ -43,6 +43,7 @@ class TypeController extends Controller
        } else {
           unset($data['image']);
        }
+       $data ['slug']=Slug($data['title']);
 
        $general = Type::create($data);
 
@@ -88,6 +89,7 @@ class TypeController extends Controller
          } else {
             $data['image'] = $general->image;
          }
+         $data ['slug']=Slug($data['title']);
 
          $general->update($data);
 

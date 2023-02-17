@@ -16,10 +16,16 @@ class Project extends Model
 
     protected $fillable = [
         'title',
+        'slug',
         'description',
         'image',
         'type_id',
         'city_id',
         'location',
     ];
+    public function CityData ()
+    {
+        return $this->belongsTo(City::class,'city_id');
+    }
+
 }

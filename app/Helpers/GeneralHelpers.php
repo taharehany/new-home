@@ -118,3 +118,24 @@ if (!function_exists('is_mobile')) {
       return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
    }
 }
+
+
+if (!function_exists('slug')) {
+   function slug($string, $separator = '-') {
+      if (is_null($string)) {
+          return "";
+      }
+
+      $string = trim($string);
+
+      $string = mb_strtolower($string, "UTF-8");;
+
+      $string = preg_replace("/[^a-z0-9_\sءاأإآؤئبتثجحخدذرزسشصضطظعغفقكلمنهويةى]#u/", "", $string);
+
+      $string = preg_replace("/[\s-]+/", " ", $string);
+
+      $string = preg_replace("/[\s_]/", $separator, $string);
+
+      return $string;
+  }
+}

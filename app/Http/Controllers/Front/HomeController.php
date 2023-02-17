@@ -13,8 +13,8 @@ class HomeController extends Controller
    public function index()
    {
       $cities = City::all();
-      $types = Type::all();
-      $projects = Project::all();
+      $types = Type::with('Project')->get();
+      $projects = Project::get();
 
       // dd(count($types) * 6);
 

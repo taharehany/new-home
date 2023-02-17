@@ -53,7 +53,7 @@
                         <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">المناطق</a>
                         <ul class="dropdown-menu">
                            @foreach(cities() as $city)
-                           <li><a class="dropdown-item" href="{{ route('city.show', $city->id) }}">{{ $city->title }}</a>
+                           <li><a class="dropdown-item" href="{{ route('city.show', $city->slug) }}">{{ $city->title }}</a>
                            </li>
                            @endforeach
                         </ul>
@@ -63,7 +63,7 @@
                         <ul class="dropdown-menu">
                            @foreach(types() as $type)
                            <li>
-                              <a class="dropdown-item" href="{{ route('type.index', $type->id) }}">{{ $type->title }}</a>
+                              <a class="dropdown-item" href="{{ route('type.index', $type->slug) }}">{{ $type->title }}</a>
                            </li>
                            @endforeach
                         </ul>

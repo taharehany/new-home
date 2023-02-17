@@ -18,8 +18,8 @@
    <div class="container">
       <div class="property-content">
          <div class="row">
-            @if (count($projects) > 0)
-            @foreach ($projects as $project)
+            @if (count($typs) > 0)
+            @foreach ($typs->projects as $project)
             <div class="col-md-12 col-lg-4">
                <div class="property-box">
                   <div class="property-image"><a href="{{ route('project.show', $project->id) }}"><img src="{{ asset($project->image) }}" alt=""></a></div>
@@ -35,7 +35,7 @@
                </div>
             </div>
             @endforeach
-            
+
             @else
             <h2 class="text-center">لا يوجد عقارات</h2>
             @endif

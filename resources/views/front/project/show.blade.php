@@ -50,23 +50,25 @@
                 <h3>عقارات ذات صلة</h3>
               </div>
               <div class="row">
-               @foreach ($related_projects as $related_project)
+               @forelse ($related_projects as $related_project)
                 <div class="col-sm-6 col-md-12 col-lg-6">
                   <div class="property-box">
                     <div class="property-image">
-                    <a href="{{ route('project.show', $related_project->id) }}">
+                    <a href="{{ route('project.show', [@$related_project->slug,$related_project->CityData->slug]) }}">
                      <img src="{{ asset($related_project->image) }}" alt="">
                     </a>
                   </div>
                     <div class="property-details">
-                     <a href="{{ route('project.show', $related_project->id) }}">
+                     <a href="{{ route('project.show', [@$related_project->slug,$related_project->CityData->slug]) }}">
                         <h2 class="title">{{ $related_project->title }}</h2>
                         <p class="location"><i class="bi-pin"></i>{{ $related_project->location }}</p>
                      </a>
                   </div>
                   </div>
                 </div>
-               @endforeach
+                @empty
+                <p>لا يوجد عقارات</p>
+               @endforelse
               </div>
             </div>
           </aside>

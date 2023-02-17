@@ -50,6 +50,7 @@ class ProjectsController extends Controller
       } else {
          unset($data['image']);
       }
+      $data ['slug']=Slug($data['title']);
 
       $general = Project::create($data);
 
@@ -113,6 +114,7 @@ class ProjectsController extends Controller
       } else {
          $data['image'] = $general->image;
       }
+      $data ['slug']=Slug($data['title']);
 
       $general->update($data);
 
