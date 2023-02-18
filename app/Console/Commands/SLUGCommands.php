@@ -26,7 +26,7 @@ class SLUGCommands extends Command
       }
 
       foreach($types as $type){
-         $city->type = Slug($type->title);
+         $type->slug = Slug($type->title);
          $type->save();
       }
 

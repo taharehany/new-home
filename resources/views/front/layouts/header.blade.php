@@ -101,7 +101,7 @@
                            <ul class="dropdown-menu">
                               @foreach(types() as $type)
                               <li>
-                                 <a class="dropdown-item" href="{{ route('type.index', $type->id) }}">{{ $type->title }}</a>
+                                 <a class="dropdown-item" href="{{ route('type.index', $type->slug) }}">{{ $type->title }}</a>
                               </li>
                               @endforeach
                            </ul>
