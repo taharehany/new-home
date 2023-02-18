@@ -75,7 +75,7 @@
 <!--properties-->
 <section class="properties">
    <div class="container">
-      {{dd($types)}}
+   
       @foreach ($types as $type)
 
       <div class="property-content">
@@ -83,7 +83,7 @@
             <h2>{{ $type->title }}</h2><a href="{{ route('type.index', $type->slug) }}">عرض الكل</a>
          </div>
          <div class="row">
-            @foreach ($type->Project as $project)
+            @foreach ($type->Projects-take(6) as $project)
            <div class="col-md-6 col-lg-4">
                <div class="property-box">
                   <div class="property-image">
