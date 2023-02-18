@@ -7,7 +7,7 @@
 <nav class="main-breadcrumb" aria-label="breadcrumb" style="background-image:url({{asset('front/images/backgrounds/broad.jpg')}})">
    <div class="container">
       <ol class="breadcrumb">
-         <li class="breadcrumb-item active" aria-current="page">جميع العقارات</li>
+         <li class="breadcrumb-item active" aria-current="page">{{ $type->title }}</li>
       </ol>
    </div>
 </nav>

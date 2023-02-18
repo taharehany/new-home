@@ -11,10 +11,12 @@ class TypeController extends Controller
 {
    public function show($slug)
    {
+      $type = Type::where('slug',$slug)->first();
+
        $types = Type::where('slug', $slug)->with('Projects')->first();
          if(!$types){
             return abort(404);
          }
-       return view('front.type.index', compact('types'));
+       return view('front.type.index', compact('types', 'type'));
    }
 }
