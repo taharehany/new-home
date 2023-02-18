@@ -18,13 +18,13 @@
    <div class="container">
       <div class="property-content">
          <div class="row">
-            @if (count($typs) > 0)
-            @foreach ($typs->projects as $project)
+            @if (count($types->Projects) > 0)
+            @foreach ($types->Projects as $project)
             <div class="col-md-12 col-lg-4">
                <div class="property-box">
-                  <div class="property-image"><a href="{{ route('project.show', $project->id) }}"><img src="{{ asset($project->image) }}" alt=""></a></div>
+                  <div class="property-image"><a href="{{ route('project.show', [@$project->slug,$project->CityData->slug]) }}"><img src="{{ asset($project->image) }}" alt=""></a></div>
                   <div class="property-details">
-                     <a href="{{ route('project.show', $project->id) }}">
+                     <a style="text-decoration: none;" href="{{ route('project.show', [@$project->slug,$project->CityData->slug]) }}">
                         <h2 class="title">{{ $project->title }}</h2>
                         <p class="location"><i class="bi-pin"></i>{{ $project->location }}</p>
                      </a>
