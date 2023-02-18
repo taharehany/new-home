@@ -23,6 +23,6 @@ class Type extends Model
      }
 
      public function Project(){
-      return $this->hasMany(Project::class, 'type_id')->orderby('id','DESC')->take(6);
+      return $this->hasMany(Project::class, 'type_id')->orderby('id','DESC')->limit(6);
     }
 }
