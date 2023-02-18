@@ -75,6 +75,7 @@
 <!--properties-->
 <section class="properties">
    <div class="container">
+      {{dd($types)}}
       @foreach ($types as $type)
 
       <div class="property-content">
