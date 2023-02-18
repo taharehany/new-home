@@ -16,7 +16,7 @@
                         <div class="main">
                            <ul>
                               @foreach(types() as $type)
-                              <li><a href="{{ route('type.index', $type->id) }}">{{ $type->title }}</a></li>
+                              <li><a href="{{ route('type.index', $type->slug) }}">{{ $type->title }}</a></li>
                               @endforeach
                            </ul>
                         </div>
