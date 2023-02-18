@@ -12,7 +12,6 @@ class TypeController extends Controller
    public function show($slug)
    {
        $typs = Type::where('slug', $slug)->with('projects')->get();
-       where('slug',$slug)->first();
          if(!$typs){
             return abort(404);
          }
