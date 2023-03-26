@@ -24,6 +24,32 @@ section.properties .property-content .property-box .property-details .btn.fav {
   background-color: #9ff605;
 }
 
+.single-property-page aside .single-property-form {
+  background-color: #00aee4;
+}
+.single-property-page aside .single-property-form h4 {
+  color: #fff;
+}
+.single-property-page aside .single-property-form .form-control {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+.single-property-page aside .single-property-form .btn {
+  background-color: #9ff605;
+  padding: 7px 30px;
+  font-weight: 600;
+}
+.single-property-page aside .list-group {
+  border-bottom: 0;
+}
+.single-property-page aside .list-group .list-group-item {
+  border: 2px solid #00aee4;
+  border-radius: 5px;
+  margin-bottom: 15px;
+}
+.single-property-page aside .list-group .list-group-item:nth-child(2) {
+  border-color: #19c34a;
+}
+
 .main-breadcrumb {
   padding: 6rem 0 5rem;
 }

@@ -52,7 +52,7 @@
                      </a>
                   </div>
 
-                  <div class="related-properties mb-3">
+                  <div class="related-properties single-property-form mb-3">
                      <!-- contact form -->
                      <h4 class="mx-auto mb-3">تواصل معنا الآن</h4>
                      <form class="form-horizontal">
@@ -68,7 +68,7 @@
                               </div>
                            </div>
                            <div class="form-group">
-                              <button type="submit" class="btn btn-primary" value="Send">إرسال</button>
+                              <button type="submit" class="btn" value="Send">إرسال</button>
                            </div>
                         </div>
                      </form>
