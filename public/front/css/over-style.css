@@ -1,0 +1,130 @@
+.hero-header {
+  padding: 20vh 0 15vh;
+}
+
+.btn-primary {
+  background-color: #00aee4;
+  border-color: inherit;
+}
+
+ul {
+  padding: revert;
+}
+
+header.fixed {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+header .navbar {
+  position: static;
+}
+
+section.properties .property-content .property-box .property-details .btn.fav {
+  background-color: #9ff605;
+}
+
+.main-breadcrumb {
+  padding: 6rem 0 5rem;
+}
+
+.top-alert {
+  border-radius: 0;
+  background-color: #00131f;
+  color: #fff;
+}
+.top-alert a {
+  color: inherit;
+}
+.top-alert .btn-close {
+  color: #fff;
+  font-size: 30px;
+  padding: 10px 0 0 10px;
+  background: none;
+}
+.top-alert .btn {
+  font-weight: 600;
+  color: #fff;
+}
+.top-alert .btn-1 {
+  background-color: #9ff605;
+  color: #252525;
+  -webkit-margin-end: 5px;
+          margin-inline-end: 5px;
+}
+.top-alert .btn-2 {
+  background-color: #00aee4;
+}
+
+.form-modal .modal-footer {
+  border: 0;
+}
+.form-modal .modal-header .btn-close {
+  margin: 0;
+}
+.form-modal .form-group {
+  margin-bottom: 15px;
+}
+.form-modal .form-control {
+  color: #333;
+  background-color: #fff;
+  font-size: 16px;
+  padding: 10px;
+  border-radius: 5px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  -ms-border-radius: 5px;
+  -o-border-radius: 5px;
+}
+.form-modal .form-control:focus {
+  box-shadow: none;
+  border-color: #00aee4;
+}
+
+.sticky-contact {
+  width: 100%;
+  justify-content: space-around;
+  text-align: center;
+  padding: 10px;
+  box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.15);
+  display: none;
+  position: fixed;
+  bottom: 0;
+  z-index: 99;
+  background-color: #fff;
+}
+.sticky-contact a {
+  color: inherit;
+}
+.sticky-contact button {
+  all: unset;
+  cursor: pointer;
+}
+.sticky-contact .box {
+  width: 33.3333333333%;
+  font-weight: 500;
+}
+.sticky-contact .box i {
+  display: block;
+}
+.sticky-contact .box:nth-child(1) {
+  color: #00aee4;
+}
+.sticky-contact .box:nth-child(2) {
+  color: red;
+}
+.sticky-contact .box:nth-child(3) {
+  color: #19c34a;
+}
+
+@media screen and (max-width: 767px) {
+  .sticky-contact {
+    display: flex;
+  }
+  footer {
+    margin-bottom: 68px;
+  }
+  footer .copyright {
+    padding: 5px 0;
+  }
+}/*# sourceMappingURL=over-style.css.map */

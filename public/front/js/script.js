@@ -11,9 +11,9 @@ $(document).ready(function () {
     let scroll = $(window).scrollTop();
 
     if (scroll >= 5) {
-      $("header .navbar.main-nav").addClass("fixed");
+      $("header").addClass("fixed");
     } else {
-      $("header .navbar.main-nav").removeClass("fixed");
+      $("header").removeClass("fixed");
     }
   });
 

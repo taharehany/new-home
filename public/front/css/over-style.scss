@@ -1,0 +1,150 @@
+// global variables
+$main_color: #00aee4;
+$new_color: #9ff605;
+$second_color: #263173;
+$dark_color: #252525;
+
+.hero-header {
+   padding: 20vh 0 15vh;
+}
+
+.btn-primary {
+   background-color: $main_color;
+   border-color: inherit;
+}
+
+ul {
+   padding: revert;
+}
+
+header {
+   &.fixed {
+      position: sticky;
+      top: 0;
+      z-index: 999;
+   }
+   .navbar {
+      position: static;
+   }
+}
+
+section.properties .property-content .property-box .property-details .btn.fav {
+    background-color: $new_color;
+}
+
+.main-breadcrumb {
+   padding: 6rem 0 5rem;
+}
+
+.top-alert {
+   border-radius: 0;
+   background-color: #00131f;
+   color: #fff;
+
+   a {
+      color: inherit;
+   }
+
+   .btn-close {
+      color: #fff;
+      font-size: 30px;
+      padding: 10px 0 0 10px;
+      background: none;
+   }
+   .btn {
+      font-weight: 600;
+      color: #fff;
+   }
+   .btn-1 {
+      background-color: $new_color;
+      color: $dark_color;
+      margin-inline-end: 5px;
+   }
+   .btn-2 {
+      background-color: $main_color;
+   }
+}
+
+.form-modal {
+   .modal-footer {
+      border: 0;
+   }
+
+   .modal-header .btn-close {
+      margin: 0;
+   }
+
+   .form-group {
+      margin-bottom: 15px
+   }
+
+   .form-control {
+      color: #333;
+      background-color: #fff;
+      font-size: 16px;
+      padding: 10px;
+      border-radius: 5px;
+      -webkit-border-radius: 5px;
+      -moz-border-radius: 5px;
+      -ms-border-radius: 5px;
+      -o-border-radius: 5px;
+
+      &:focus {
+         box-shadow: none;
+         border-color: $main_color;
+      }
+   }
+}
+
+.sticky-contact {
+   width: 100%;
+   justify-content: space-around;
+   text-align: center;
+   padding: 10px;
+   box-shadow: 0 -3px 12px rgba(0, 0, 0, 0.15);
+   display: none;
+   // display: flex;
+   position: fixed;
+   bottom: 0;
+   z-index: 99;
+   background-color: #fff;
+
+   a {
+      color: inherit;
+   }
+
+   button {
+      all: unset;
+      cursor: pointer;
+   }
+
+   .box {
+      width: calc(100% / 3);
+      font-weight: 500;
+      i {
+         display: block;
+      }
+
+      &:nth-child(1) {
+         color: $main_color;
+      }
+      &:nth-child(2) {
+         color: red;
+      }
+      &:nth-child(3) {
+         color: #19c34a;
+      }
+   }
+}
+
+@media screen and (max-width: 767px) {
+   .sticky-contact {
+      display: flex;
+   }
+   footer {
+      margin-bottom: 68px;
+      .copyright {
+         padding: 5px 0;
+      }
+   }
+}
