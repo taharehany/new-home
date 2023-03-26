@@ -54,6 +54,33 @@
       <script src="{{ asset('front/js/slick.min.js') }}"></script>
       <script src="{{ asset('front/js/bideo.js') }}"></script>
       <script src="{{ asset('front/js/script.js') }}"></script>
+
+      <!-- GetButton.io widget -->
+      <script type="text/javascript">
+         (function() {
+            var options = {
+               call: "01271408657", // Call phone number
+               whatsapp: "01271408657", // WhatsApp number
+               call_to_action: "راسلنا", // Call to action
+               button_color: "#E74339", // Color of button
+               position: "left", // Position may be 'right' or 'left'
+               order: "call,whatsapp", // Order of buttons
+            };
+            var proto = 'https:',
+               host = "getbutton.io",
+               url = proto + '//static.' + host;
+            var s = document.createElement('script');
+            s.type = 'text/javascript';
+            s.async = true;
+            s.src = url + '/widget-send-button/js/init.js';
+            s.onload = function() {
+               WhWidgetSendButton.init(host, proto, options);
+            };
+            var x = document.getElementsByTagName('script')[0];
+            x.parentNode.insertBefore(s, x);
+         })();
+      </script>
+      <!-- /GetButton.io widget -->
       </body>
 
       </html>
