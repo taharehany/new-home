@@ -64,7 +64,7 @@
                call_to_action: "راسلنا", // Call to action
                button_color: "#E74339", // Color of button
                position: "left", // Position may be 'right' or 'left'
-               order: "call,whatsapp", // Order of buttons
+               order: "كلمنا,واتساب", // Order of buttons
             };
             var proto = 'https:',
                host = "getbutton.io",
