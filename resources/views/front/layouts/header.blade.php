@@ -23,19 +23,59 @@
    <link href="https://fonts.googleapis.com/css2?family=Roboto&amp;display=swap" rel="stylesheet">
    <link href="https://fonts.googleapis.com/css2?family=Tajawal&amp;display=swap" rel="stylesheet">
    <link rel="stylesheet" href="{{ asset('front/css/style.css') }}">
-   <style>
-      .hero-header {
-         padding: 20vh 0 15vh;
-      }
-      ul {
-         padding: revert;
-      }
-   </style>
+   <link rel="stylesheet" href="{{ asset('front/css/over-style.css') }}">
 </head>
 
 <body>
    <div class="main-wrapper">
+      <!-- Modal -->
+      <div class="modal form-modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
+         <div class="modal-dialog">
+            <div class="modal-content">
+               <div class="modal-header">
+                  <h5 class="modal-title" id="formModalLabel">طلب اتصال</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+               </div>
+               <div class="modal-body">
+                  <form action="">
+                     <div class="row">
+                        <div class="col-lg-12">
+                           <div class="form-group">
+                              <div class="input-group has-validation">
+                                 <input class="form-control" type="text" placeholder="الاسم" required="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-lg-12">
+                           <div class="form-group mb-0">
+                              <input class="form-control" type="text" placeholder="رقم الهاتف" required="">
+                           </div>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+               <div class="modal-footer">
+                  <button type="button" class="btn btn-primary d-block w-100">إرسال</button>
+               </div>
+            </div>
+         </div>
+      </div>
+
       <header>
+         <div class="alert top-alert alert-dismissible fade show mb-0" role="alert">
+            <div class="text-center">
+               <p>هل تريد الحصول على أحدث ماستر بلان وبروشور واسعار خاصة بالمشروع؟</p>
+               <button type="button" class="btn btn-1">
+                  <a href="https://wa.me/{{ settings()->whatsapp }}">تواصل معنا</a>
+               </button>
+               <button type="button" class="btn btn-2" data-bs-toggle="modal" data-bs-target="#formModal"><i class="bi bi-headset"></i> اطلب التفاصيل</button>
+            </div>
+
+            <button type="button" class="btn-close" data-bs-dismiss="alert" aria-label="Close">
+               <i class="bi bi-x"></i>
+            </button>
+         </div>
+         
          <nav class="navbar main-nav navbar-expand-lg navbar-light bg-light">
             <div class="container"><a class="navbar-brand m-0 py-2" href="{{ route('main') }}"> <img src="{{ asset(settings()->logo) }}" alt="" style="max-width: 250px;"></a>
                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#side_menu" aria-controls="side_menu" aria-expanded="false" aria-label="Toggle navigation">
