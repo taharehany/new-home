@@ -28,3 +28,5 @@ Route::get('/types/{slug?}', [TypeController::class, 'show'])->name('type.index'
 Auth::routes();
 
 Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+
+Route::post('/contactus', [HomeController::class, 'contactus'])->name('contactus');

@@ -37,26 +37,28 @@
                   <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                </div>
                <div class="modal-body">
-                  <form action="">
+                  <form action="{{route('contactus')}}" method="post">
+                      @csrf()
                      <div class="row">
                         <div class="col-lg-12">
                            <div class="form-group">
                               <div class="input-group has-validation">
-                                 <input class="form-control" type="text" placeholder="الاسم" required="">
+                                 <input class="form-control" name="name" type="text" placeholder="الاسم" required="">
                               </div>
                            </div>
                         </div>
                         <div class="col-lg-12">
                            <div class="form-group mb-0">
-                              <input class="form-control" type="text" placeholder="رقم الهاتف" required="">
+                              <input class="form-control" name="phone" type="text" placeholder="رقم الهاتف" required="">
                            </div>
                         </div>
                      </div>
+                     <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary d-block w-100">إرسال</button>
+               </div>
                   </form>
                </div>
-               <div class="modal-footer">
-                  <button type="button" class="btn btn-primary d-block w-100">إرسال</button>
-               </div>
+               
             </div>
          </div>
       </div>

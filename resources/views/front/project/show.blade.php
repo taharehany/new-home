@@ -55,23 +55,26 @@
                   <div class="related-properties single-property-form mb-3">
                      <!-- contact form -->
                      <h4 class="mx-auto mb-3">تواصل معنا الآن</h4>
-                     <form class="form-horizontal">
-                        <div class="row">
-                           <div class="col-md-12">
-                              <div class="form-group">
-                                 <input type="text" class="form-control" placeholder="الاسم" name="name" required>
-                              </div>
-                           </div>
-                           <div class="col-md-12">
-                              <div class="form-group">
-                                 <input type="text" class="form-control" placeholder="رقم الهاتف" name="phone" required>
-                              </div>
-                           </div>
+                    <form action="{{route('contactus')}}" method="post">
+                      @csrf()
+                     <div class="row">
+                        <div class="col-lg-12">
                            <div class="form-group">
-                              <button type="submit" class="btn" value="Send">إرسال</button>
+                              <div class="input-group has-validation">
+                                 <input class="form-control" name="name" type="text" placeholder="الاسم" required="">
+                              </div>
                            </div>
                         </div>
-                     </form>
+                        <div class="col-lg-12">
+                           <div class="form-group mb-0">
+                              <input class="form-control" name="phone" type="text" placeholder="رقم الهاتف" required="">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="modal-footer">
+                  <button type="submit" class="btn btn-primary d-block w-100">إرسال</button>
+               </div>
+                  </form>
                   </div>
 
                   <div class="related-properties">

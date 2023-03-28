@@ -1,0 +1,2 @@
+[27-Mar-2023 18:05:00 UTC] PHP Fatal error:  Cannot use App\Models\contactus as contactus because the name is already in use in /home/tahareha/public_html/newhome-re.co/app/Http/Controllers/Front/HomeController.php on line 12
+[27-Mar-2023 18:05:09 UTC] PHP Fatal error:  Cannot use App\Models\contactus as contactus because the name is already in use in /home/tahareha/public_html/newhome-re.co/app/Http/Controllers/Front/HomeController.php on line 12
