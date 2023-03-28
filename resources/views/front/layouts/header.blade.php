@@ -28,6 +28,21 @@
 
 <body>
    <div class="main-wrapper">
+      @if(session('message'))
+      <div class='alert alert-success'>
+         {{ session('message') }}
+      </div>
+      @endif
+      @if($errors->any())
+      <div class="alert alert-danger">
+         <ul>
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach
+         </ul>
+      </div>
+      @endif
+
       <!-- Modal -->
       <div class="modal form-modal fade" id="formModal" tabindex="-1" aria-labelledby="formModalLabel" aria-hidden="true">
          <div class="modal-dialog">
@@ -38,7 +53,7 @@
                </div>
                <div class="modal-body">
                   <form action="{{route('contactus')}}" method="post">
-                      @csrf()
+                     @csrf()
                      <div class="row">
                         <div class="col-lg-12">
                            <div class="form-group">
@@ -54,11 +69,10 @@
                         </div>
                      </div>
                      <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary d-block w-100">إرسال</button>
-               </div>
+                        <button type="submit" class="btn btn-primary d-block w-100">إرسال</button>
+                     </div>
                   </form>
                </div>
-               
             </div>
          </div>
       </div>
@@ -77,7 +91,7 @@
                <i class="bi bi-x"></i>
             </button>
          </div>
-         
+
          <nav class="navbar main-nav navbar-expand-lg navbar-light bg-light">
             <div class="container"><a class="navbar-brand m-0 py-2" href="{{ route('main') }}"> <img src="{{ asset(settings()->logo) }}" alt="" style="max-width: 250px;"></a>
                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#side_menu" aria-controls="side_menu" aria-expanded="false" aria-label="Toggle navigation">
