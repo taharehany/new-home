@@ -188,20 +188,20 @@
                            <td align="center" bgcolor="#ffffff" style="padding: 12px;">
                               <table border="0" cellpadding="0" cellspacing="0">
                                  <tr>
-                                    <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">Name:
-                                       <a target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['name']}}</a>
+                                    <td align="center" style="border-radius: 6px;">Name:
+                                       <a target="_blank" bgcolor="#1a82e2" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['name']}}</a>
                                     </td>
                                  </tr>
 
                                  <tr>
-                                    <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">Phone:
-                                       <a target="_blank" href="{{$data['data']['phone']}}" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['phone']}}</a>
+                                    <td align="center" style="border-radius: 6px;">Phone:
+                                       <a target="_blank" bgcolor="#1a82e2" href="{{$data['data']['phone']}}" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['phone']}}</a>
                                     </td>
                                  </tr>
 
                                  <tr>
-                                    <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">Project Name:
-                                       <a target="_blank" href="{{$data['data']['phone']}}" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['project-name']}}</a>
+                                    <td align="center" style="border-radius: 6px;">Project Name:
+                                       <a target="_blank" bgcolor="#1a82e2" href="{{$data['data']['phone']}}" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['project-name']}}</a>
                                     </td>
                                  </tr>
                               </table>
