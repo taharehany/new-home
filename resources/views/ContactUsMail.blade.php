@@ -171,7 +171,7 @@
 
                               <p>
                                  Phone:
-                                 <a target="_blank" href="{{$data['data']['phone']}}" style="background-color: #00aee4; padding: 5px 15px; display: inline-block; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['phone']}}</a>
+                                 <a href="tel: {{$data['data']['phone']}}" style="background-color: #00aee4; padding: 5px 15px; display: inline-block; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['phone']}}</a>
                               </p>
 
                               <br>
