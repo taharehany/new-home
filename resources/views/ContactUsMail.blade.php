@@ -128,7 +128,7 @@
                <tr>
                   <td align="center" valign="top" style="padding: 36px 24px;">
                      <a href="{{url('/')}}" target="_blank" style="display: inline-block;">
-                        <img src="{{url('front/images/logo.webp')}}" alt="Logo" border="0" width="150" style="display: block; width: 48px; max-width: 48px; min-width: 48px;">
+                        <img src="{{url('front/images/logo.webp')}}" alt="Logo" border="0" width="150" style="display: block; min-width: 100px;">
                      </a>
                   </td>
                </tr>
