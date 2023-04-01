@@ -55,26 +55,29 @@
                   <div class="related-properties single-property-form mb-3">
                      <!-- contact form -->
                      <h4 class="mx-auto mb-3">تواصل معنا الآن</h4>
-                    <form action="{{route('contactus')}}" method="post">
-                      @csrf()
-                     <div class="row">
-                        <div class="col-lg-12">
-                           <div class="form-group">
-                              <div class="input-group has-validation">
-                                 <input class="form-control" name="name" type="text" placeholder="الاسم" required="">
+                     <form action="{{route('contactus')}}" method="post">
+                        @csrf()
+
+                        <input name="project-name" value="{{ $project->title }}" hidden>
+
+                        <div class="row">
+                           <div class="col-lg-12">
+                              <div class="form-group">
+                                 <div class="input-group has-validation">
+                                    <input class="form-control" name="name" type="text" placeholder="الاسم" required="">
+                                 </div>
+                              </div>
+                           </div>
+                           <div class="col-lg-12">
+                              <div class="form-group mb-0">
+                                 <input class="form-control" name="phone" type="text" placeholder="رقم الهاتف" required="">
                               </div>
                            </div>
                         </div>
-                        <div class="col-lg-12">
-                           <div class="form-group mb-0">
-                              <input class="form-control" name="phone" type="text" placeholder="رقم الهاتف" required="">
-                           </div>
+                        <div class="modal-footer">
+                           <button type="submit" class="btn btn-primary d-block w-100">إرسال</button>
                         </div>
-                     </div>
-                     <div class="modal-footer">
-                  <button type="submit" class="btn btn-primary d-block w-100">إرسال</button>
-               </div>
-                  </form>
+                     </form>
                   </div>
 
                   <div class="related-properties">

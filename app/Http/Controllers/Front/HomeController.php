@@ -24,8 +24,8 @@ class HomeController extends Controller
 
       return view('front.index', compact('projects', 'cities', 'types'));
    }
-   
-   
+
+
     public function contactus()
     {
         $data = request()->all();
@@ -33,7 +33,7 @@ class HomeController extends Controller
         contactus::create($data);
           try {
             $email = env('send_to');
-       
+
             Mail::to($email)->send(new ContactUsMail(['html.view','data' => $data]));
         } catch (\Exception $e) {
             dd($e);
