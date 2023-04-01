@@ -164,21 +164,21 @@
                            <td bgcolor="#ffffff" style="padding: 12px;">
                               <p>
                                  Name:
-                                 <a target="_blank" style="background-color: #00aee4; padding: 5px 15px; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['name']}}</a>
+                                 <a target="_blank" style="background-color: #00aee4; padding: 5px 15px; display: inline-block; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['name']}}</a>
                               </p>
 
                               <br>
 
                               <p>
                                  Phone:
-                                 <a target="_blank" href="{{$data['data']['phone']}}" style="background-color: #00aee4; padding: 5px 15px; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['phone']}}</a>
+                                 <a target="_blank" href="{{$data['data']['phone']}}" style="background-color: #00aee4; padding: 5px 15px; display: inline-block; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['phone']}}</a>
                               </p>
 
                               <br>
 
                               <p>
                                  Project Name:
-                                 <a target="_blank" style="background-color: #00aee4; padding: 5px 15px; display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['project-name']}}</a>
+                                 <a target="_blank" style="background-color: #00aee4; padding: 5px 15px; display: inline-block; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['project-name']}}</a>
                               </p>
                            </td>
                         </tr>
