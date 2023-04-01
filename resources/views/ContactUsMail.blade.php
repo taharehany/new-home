@@ -4,7 +4,7 @@
 <head>
    <meta charset="utf-8">
    <meta http-equiv="x-ua-compatible" content="ie=edge">
-   <title>Password Reset</title>
+   <title>New Home</title>
    <meta name="viewport" content="width=device-width, initial-scale=1">
    <style type="text/css">
       /**
@@ -128,7 +128,7 @@
                <tr>
                   <td align="center" valign="top" style="padding: 36px 24px;">
                      <a href="{{url('/')}}" target="_blank" style="display: inline-block;">
-                        <img src="{{url('assets/images/logo.png')}}" alt="Logo" border="0" width="48" style="display: block; width: 48px; max-width: 48px; min-width: 48px;">
+                        <img src="{{url('front/images/logo.webp')}}" alt="Logo" border="0" width="48" style="display: block; width: 48px; max-width: 48px; min-width: 48px;">
                      </a>
                   </td>
                </tr>
@@ -188,15 +188,19 @@
                            <td align="center" bgcolor="#ffffff" style="padding: 12px;">
                               <table border="0" cellpadding="0" cellspacing="0">
                                  <tr>
-                                    <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
+                                    <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">Name:
                                        <a target="_blank" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['name']}}</a>
                                     </td>
+                                 </tr>
 
-                                    <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
+                                 <tr>
+                                    <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">Phone:
                                        <a target="_blank" href="{{$data['data']['phone']}}" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['phone']}}</a>
                                     </td>
+                                 </tr>
 
-                                    <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">
+                                 <tr>
+                                    <td align="center" bgcolor="#1a82e2" style="border-radius: 6px;">Project Name:
                                        <a target="_blank" href="{{$data['data']['phone']}}" style="display: inline-block; padding: 16px 36px; font-family: 'Source Sans Pro', Helvetica, Arial, sans-serif; font-size: 16px; color: #ffffff; text-decoration: none; border-radius: 6px;">{{$data['data']['project-name']}}</a>
                                     </td>
                                  </tr>
