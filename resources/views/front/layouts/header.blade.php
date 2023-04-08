@@ -63,8 +63,13 @@
                            </div>
                         </div>
                         <div class="col-lg-12">
-                           <div class="form-group mb-0">
+                           <div class="form-group">
                               <input class="form-control" name="phone" type="text" placeholder="رقم الهاتف" required="">
+                           </div>
+                        </div>
+                        <div class="col-lg-12">
+                           <div class="form-group mb-0">
+                              <input class="form-control" name="project-name" type="text" placeholder="اسم المشروع">
                            </div>
                         </div>
                      </div>
